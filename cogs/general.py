@@ -153,7 +153,7 @@ class general(commands.Cog, name="general"):
             response = await raw_response.text()
             response = json.loads(response)
             embed = discord.Embed(
-                title=response,
+                title=response["bpi"]["USD"]["rate"] + "$. Скоро пузырь лопнет)",
                 color=config.success
             )
             await context.send(embed=embed)
